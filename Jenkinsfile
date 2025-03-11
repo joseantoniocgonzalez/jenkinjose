@@ -73,14 +73,14 @@ pipeline {
                 script {
                     withCredentials([sshUserPrivateKey(credentialsId: 'vps-ssh-credentials', keyFileVariable: 'SSH_KEY')]) {
                         sh '''
-                            echo "🔍 Conectando al VPS..."
+                            echo "Conectando al VPS..."
                             ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST << EOF
-                                echo "🛠️ Desplegando en el VPS..."
+                                echo "Desplegando en el VPS..."
                                 cd $PROJECT_PATH
                                 docker-compose down
                                 docker pull $DOCKER_HUB_USER/$IMAGE_NAME:latest
                                 docker-compose up -d --build
-                                echo "✅ Despliegue finalizado correctamente."
+                                echo "Despliegue finalizado correctamente."
 EOF
                         '''
                     }
