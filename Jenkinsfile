@@ -27,7 +27,8 @@ pipeline {
             steps {
                 sh '''
                     pip install --upgrade pip
-                    pip install -r requirements.txt
+                    ls -la app  # Verificar que requirements.txt está presente
+                    pip install -r app/requirements.txt  # Cambiar la ruta de requirements.txt
                 '''
             }
         }
@@ -42,7 +43,8 @@ pipeline {
             steps {
                 sh '''
                     pip install --upgrade pip
-                    pip install -r requirements.txt
+                    ls -la app  # Verificar que requirements.txt está presente
+                    pip install -r app/requirements.txt  # Cambiar la ruta de requirements.txt
                     pytest test_app.py
                 '''
             }
