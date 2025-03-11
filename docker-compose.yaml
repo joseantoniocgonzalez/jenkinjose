@@ -1,16 +1,11 @@
-version: "3.8"
+version: '3.8'
 
 services:
   flask-app:
-    image: mi-flask-app  # Usa el nombre de la imagen que creaste
+    image: joseantoniocgonzalez/flask-app
     container_name: flask-app
     ports:
-      - "5002:5002"  # Mapea el puerto del contenedor al host
+      - "5002:5002"
     environment:
-      - NOMBRE=MiAplicacion  # Define una variable de entorno
-    volumes:
-      - contador_data:/usr/share/app/  # Mantiene el archivo contador.txt persistente
-    restart: unless-stopped  # Reinicia el contenedor si falla
-
-volumes:
-  contador_data:
+      - NOMBRE=JoseAntonio
+    restart: always
