@@ -93,7 +93,7 @@ EOF
         always {
             mail to: 'er.joselin@gmail.com',
                  subject: "Pipeline Finalizado",
-                 body: "El pipeline de Jenkins ha finalizado. Revisa los logs para más detalles."
+                 body: "El pipeline de Jenkins ha finalizado. La imagen generada es: $IMAGE_NAME. Revisa los logs para más detalles."
         }
     }
 }
