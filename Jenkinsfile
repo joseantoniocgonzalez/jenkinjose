@@ -28,7 +28,7 @@ pipeline {
                 sh '''
                     pip install --upgrade pip
                     ls -la app  # Verificar que requirements.txt está presente
-                    pip install -r app/requirements.txt  # Cambiar la ruta de requirements.txt
+                    pip install -r app/requirements.txt  # Cambiar la ruta a app/requirements.txt
                 '''
             }
         }
@@ -44,8 +44,8 @@ pipeline {
                 sh '''
                     pip install --upgrade pip
                     ls -la app  # Verificar que test_app.py está presente
-                    pip install -r app/requirements.txt  # Cambiar la ruta de requirements.txt
-                    pytest app/test_app.py  # Apuntar al archivo de prueba correcto
+                    pip install -r app/requirements.txt  # Cambiar la ruta a app/requirements.txt
+                    pytest app/test_app.py  # Ejecutar pruebas en la ruta correcta
                 '''
             }
         }
