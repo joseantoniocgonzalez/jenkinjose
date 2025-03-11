@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   flask-app:
-    image: joseantoniocgonzalez/flask-app
+    image: joseantoniocgonzalez/mi-flask-app  # Cambié el nombre de la imagen (sin espacio)
     container_name: flask-app
     ports:
       - "5002:5002"
