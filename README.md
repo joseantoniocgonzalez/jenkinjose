@@ -1,21 +1,34 @@
-Este repositorio contiene un pipeline completo de Integración y Entrega Continua (CI/CD) implementado con Jenkins para una aplicación web desarrollada en Flask (Python).
+# 🚀 Pipeline CI/CD con Jenkins, Docker y Flask
 
-El flujo de trabajo automatizado incluye las siguientes fases:
+Este repositorio contiene un **pipeline completo de Integración y Entrega Continua (CI/CD)** implementado en **Jenkins** para una aplicación web desarrollada con **Flask (Python)**.  
 
-Clonado del repositorio desde GitHub mediante Jenkins.
+---
 
-Instalación de dependencias dentro de un contenedor ligero basado en Python 3.9 Alpine.
+## 🛠️ Tecnologías
+![Python](https://img.shields.io/badge/Python-3.9-blue?logo=python)
+![Flask](https://img.shields.io/badge/Flask-Web%20App-black?logo=flask)
+![Docker](https://img.shields.io/badge/Docker-Containerization-2496ED?logo=docker)
+![Jenkins](https://img.shields.io/badge/Jenkins-CI%2FCD-D24939?logo=jenkins)
+![Linux](https://img.shields.io/badge/Linux-VPS-FCC624?logo=linux)
 
-Ejecución de pruebas automatizadas con pytest para validar el correcto funcionamiento de la aplicación.
+---
 
-Construcción de la imagen Docker de la aplicación Flask a partir del Dockerfile.
+## 🔄 Flujo del pipeline
+1. 📥 **Clonado del repositorio** desde GitHub mediante Jenkins.  
+2. 📦 **Instalación de dependencias** en contenedor *Python 3.9 Alpine*.  
+3. ✅ **Ejecución de pruebas automatizadas** con *pytest*.  
+4. 🐳 **Construcción de la imagen Docker** de la aplicación Flask.  
+5. 📤 **Publicación en Docker Hub** para distribución.  
+6. 🔐 **Conexión SSH segura al VPS Linux**.  
+7. 🌐 **Despliegue remoto** con *docker-compose* y reinicio controlado.  
+8. 📧 **Notificación por correo** al finalizar la ejecución.  
 
-Publicación de la imagen en Docker Hub, asegurando su disponibilidad para despliegues posteriores.
+---
 
-Conexión segura al VPS Linux mediante credenciales SSH gestionadas en Jenkins.
+## ▶️ Ejecución local
 
-Despliegue remoto en el servidor utilizando docker-compose, con levantado automático del contenedor y reinicio controlado de la aplicación.
+```bash
+git clone https://github.com/joseantoniocgonzalez/jenkinjose
+cd jenkinjose
+docker-compose up --build -d
 
-Notificación por correo electrónico al finalizar el pipeline con el estado de la ejecución.
-
-Este proyecto demuestra un escenario real de automatización DevOps, integrando pruebas, construcción, distribución y despliegue en un solo flujo, y aplicando buenas prácticas de seguridad en la gestión de credenciales y despliegues.
